@@ -6,7 +6,7 @@
 package GameEngine;
 
 
-public class Contants {
+public class Constants {
 
     // TODO code application logic here
 
