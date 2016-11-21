@@ -6,8 +6,27 @@
 package GameEngine;
 
 
-public class Component {
+public abstract class Component {
 
-    // TODO code application logic here
+    // Holds components used to create game objects
+    
+    protected GameObject owner;
+    protected Constants.ComponentType compType;
+    
+    public void tick(float delta) {
+        
+    }
+    
+    public Constants.ComponentType getType() {
+        return compType;
+    }
+    
+    public Transform getOwnerTransform() {
+        return owner.getTransform();
+    }
+    
+    public void setOwner(GameObject owner) {
+        this.owner = owner;
+    }
 
 }
