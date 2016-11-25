@@ -12,7 +12,7 @@ public class Graphic extends Component {
     //Contains graphical data based on information in the component class
     
     private BufferedImage sprite;
-    private in height, width;
+    private int height, width;
     
     public Graphic(String imagePath, int height, int width) {
         compType = Constants.ComponentType.graphic;
