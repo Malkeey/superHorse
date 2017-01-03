@@ -50,8 +50,8 @@ public class Collider extends Component {
             boolean wasGrounded = physics.isGrounded();
             if(yIntersect(yMov, other)) {
                 if(!wasGrounded && yMov > 0) {
-                    owner.doEvent(Constants.Even.collision);
-                } else if(yMove < 0) {
+                    owner.doEvent(Constants.Event.collision);
+                } else if(yMov < 0) {
                     owner.doEvent(Constants.Event.collision);
                 }
                 return true;
@@ -80,7 +80,7 @@ public class Collider extends Component {
             //uy == upperY, ly = lowerY, lx = leftX, rx = rightX
             Transform t = getTransform();
             float uy = t.getY() - height/2 + yMov, ly = t.getY() + height/2 + yMov;
-            float lx = t.getX() - width/2, rx = getX() + width/2;
+            float lx = t.getX() - width/2, rx = t.getX() + width/2;
             
             Transform ot = other.getTransform();
             float ouy = ot.getY() - other.getHeight()/2, oly = ot.getY() + other.getHeight()/2;
@@ -116,7 +116,7 @@ public class Collider extends Component {
                 }
             }
             return false;
-        } else if(colType == ColliderType.rectangle && other.getColType() == CollderType.rectangle) {
+        } else if(colType == ColliderType.rectangle && other.getColType() == ColliderType.rectangle) {
             //uy upperY, ly = lowerY, lx = leftX, rx = rightX
             Transform t = getTransform();
             float uy = t.getY() - height/2, ly = t.getY() + height/2;

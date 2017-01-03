@@ -27,7 +27,7 @@ public class Loader {
         
     }
     
-    private static Loader getInstance() {
+    public static Loader getInstance() {
         if(Constants.theLoader == null) {
             Constants.theLoader = new Loader();
         }

@@ -5,6 +5,8 @@
  */
 package GameEngine;
 
+import java.awt.event.KeyEvent;
+import javax.sound.sampled.Clip;
 
 public class TestGame {
     
@@ -16,7 +18,7 @@ public class TestGame {
         
         GameObject testObject = new GameObject(g, "Player", 20, 20); //Create a GameObject at coordinate (0, 0), is static and is collideable.
         
-        testObject.addComponent(new Graphic("test_image.git", 32, 32));
+        testObject.addComponent(new Graphic("test_image.gif", 32, 32));
         Physics physics = new Physics(1.0f);
         testObject.addComponent(physics);
         testObject.addComponent(new Collider(32, 32));

@@ -10,7 +10,7 @@ import java.util.HashMap;
 
 import javax.sound.sampled.Clip;
 
-import game_engine.Constants.Event;
+import GameEngine.Constants.Event;
 
 public class Sound extends Component {
 

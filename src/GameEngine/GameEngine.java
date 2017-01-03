@@ -22,7 +22,7 @@ public class GameEngine {
     private SoundEngine sounds;
     
     private JFrame frame = new JFrame();
-    private List<GameObject> gameobjects = new ArrayList<GameObject>();
+    private List<GameObject> gameObjects = new ArrayList<GameObject>();
     
     private boolean exit = false;
     private boolean movementDetected = true;
@@ -77,12 +77,12 @@ public class GameEngine {
     }
     
     void addObject(GameObject g) {
-        gameobjects.add(g);
+        gameObjects.add(g);
         if(g.hasComponent(Constants.ComponentType.graphic)) {
             renderer.addGraphicComponent((Graphic)g.getComponent(Constants.ComponentType.graphic));
         }
         if(g.hasComponent(Constants.ComponentType.controller)) {
-            input.addController((Physics)g.getComponent(Constants.ComponentType.controller));
+            input.addController((GameObjectController)g.getComponent(Constants.ComponentType.controller));
         }
         if(g.hasComponent(Constants.ComponentType.physics)) {
             physics.addPhysicsComponent((Physics)g.getComponent(Constants.ComponentType.physics));
